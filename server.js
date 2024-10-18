@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config(); // Load .env variables
 const app = express();
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: "https://deploy-mytweet-client.vercel.app/signin", credentials: true }));
 
 // env var
 const REACT_APP_TWITTER_CLIENT_ID ='MmsxeUVOTGtwQ2pmT0FCc29RMVA6MTpjaQ'
@@ -13,7 +13,7 @@ const REACT_APP_TWITTER_CLIENT_SECRET='CkrFcqbYo5KX1ZGtUyAjI8OskDcjNEIibYdFA5FfB
 // Twitter OAuth credentials (stored in environment variables)
 const TWITTER_CLIENT_ID = REACT_APP_TWITTER_CLIENT_ID;
 const TWITTER_CLIENT_SECRET = REACT_APP_TWITTER_CLIENT_SECRET;
-const CALLBACK_URL = 'https://my-tweet-eight.vercel.app/signin'; // Replace
+const CALLBACK_URL = 'https://deploy-mytweet-client.vercel.app/signin'; // Replace
 
 // Endpoint to exchange authorization code for access token
 app.post('/api/twitter/token', async (req, res) => {
